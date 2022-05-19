@@ -1,0 +1,239 @@
+* {
+    /*resetar o doc/ ou navegador*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --hue: 195;
+    --primary-color: hsl(var(--hue), 53%, 79%);
+    --headline: hsl(204, 91%, 38%);
+    --paragraph: hsl(210, 9%, 31%);
+    --brand-beige: hsl(39, 100%, 97%);
+    --bg-light: hsl(195, 67%, 96%);
+    --bg-lightblue: hsl(195, 53%, 79%);
+    font-size: 62.5%;
+    /* 1rem = 10px */
+    --nav-height: 7.2rem;
+}
+
+html {
+    /* chrome://flags/#smooth-scrolling */
+    /*mover so*/
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-light)
+}
+
+header {
+    text-align: center;
+}
+
+section header h4 {
+    /* rem é unidaderelativa 1rem=1% , 1rem=10px  */
+    font-size: 2.0rem;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0.08rem;
+    color: var(--headline);
+    margin-bottom: 1.6rem;
+}
+
+section header h2 {
+    font-size: 3rem;
+    line-height: 9.9rem;
+    color: var(--headline);
+}
+
+section header h1 {
+    font-size: 1.4rem;
+    color: var(--paragraph);
+    line-height: 130%;
+    margin-bottom: 2.4rem;
+}
+
+section .content p {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 150%;
+    color: var(--paragraph);
+}
+
+section {
+    padding-block: 4rem;
+    margin-bottom: 0;
+}
+
+
+/*/*===============HOME DE EDITAIS==========================*/
+
+#home {
+    /*calcular espaço livre depos de nav*/
+    border: 0px solid black;
+    padding: 25px 50px 75px 100px;
+    background-color: var(--bg-lightblue)
+}
+
+#home h1 {
+    font-size: 2.2rem;
+}
+
+#home .content p {
+    font-size: 1.6rem;
+    margin-bottom: 2em;
+    margin: 0;
+    text-indent: 0ch;
+}
+
+.container {
+    display: inline-flex;
+    align-items: center;
+}
+
+.buttons {
+    margin-top: 50px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.button-a {
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1.4rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 8px;
+    background-color: var(--headline);
+    background-image: linear-gradient(to top left, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 30%, rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6), inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+.button-a:hover {
+    background-color: var(--bg-light)
+}
+
+.button-a:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6), inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+
+.button-b {
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1.4rem;
+    text-align: center;
+    color: var(--headline);
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 8px;
+    background-color: var(--bg-light);
+    background-image: linear-gradient(to top left, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 30%, rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6), inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+.button-b:hover {
+    background-color: var(--headline)
+}
+
+.button-b:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6), inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+
+The idea of reaching the North Pole by means of balloons appears to have been entertained many years ago.
+/*===============DESTAQUES DE EDITAIS==========================*/
+
+#destaque h1 {
+    font-size: 16px;
+}
+
+#destaque .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-gap: 20px;
+    max-width: 1000px;
+    margin: 4em auto 4em;
+}
+
+.cards header h2 {
+    font-size: 1rem;
+    line-height: 3.9rem;
+    color: var(--headline);
+    text-align: center;
+}
+
+.cards .content p {
+    font-size: 1rem;
+    line-height: 150%;
+    color: var(--paragraph);
+    text-align: justify;
+    padding: 10px 20px;
+}
+
+.card {
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+}
+
+.card h1 {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: var(--paragraph);
+    background-color: hsl(var(--hue), 53%, 79%);
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.card button:hover {
+    opacity: 0.7;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.card .content {
+    padding: .5rem;
+}
+
+
+/*============================Footer============================*/
+
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: var(--headline);
+    color: white;
+}
+
+.box {
+    display: flex;
+    margin: 0;
+    padding: 10px;
+    font-size: 1.6rem;
+}
+
+.box>div {
+    flex: 1 0 0;
+}
+
+.box>i {
+    flex: 1 0 auto;
+}
